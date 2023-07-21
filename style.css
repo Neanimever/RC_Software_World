@@ -1,0 +1,971 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    background-color: #000;
+}
+
+header {
+    height: 8rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid gray;
+    position: fixed;
+    background-color: #000;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 5rem;
+}
+
+header nav {
+    width: 40%;
+}
+
+header ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header ul li {
+    color: #FFF;
+    font-size: 1.9rem;
+    transition: .3s;
+}
+
+header ul li:hover {
+    color: #e60A6e;
+    text-decoration: underline;
+}
+
+.button {
+    border: 1px solid #e60A6e;
+    background-color: #FFF;
+    color: #000;
+    height: 5rem;
+    width: 15rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover {
+    background-color: #e60A6e;
+    color: #FFF;
+}
+
+.second {
+    border: 1px solid #FFF;
+    background-color: #000;
+    color: #FFF;
+    height: 5rem;
+    width: 15rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.second:hover {
+    background-color: #FFF;
+    color: #000;
+}
+
+.main {
+    background-image: url('https://escolaconquer.com.br/pos-graduacao/banners/homebg-oferta2.webp');
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-top: 8rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.conquer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main img {
+    position: relative;
+    top: 1.2rem;
+    margin-right: 5rem;
+    margin-bottom: 5rem;
+}
+
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content .special {
+    font-size: 3rem;
+    color: #FFF;
+    margin-bottom: 5rem;
+}
+
+.special::before {
+    content: '< ';
+    color: #e60A6e;
+    font-size: 2.5rem;
+}
+
+.special::after {
+    content: ' >';
+    color: #e60A6e;
+    font-size: 2.5rem;
+}
+
+.main-content h2 {
+    margin-bottom: 7rem;
+    color: #FFF;
+    font-size: 4rem;
+}
+
+.main-content h1 {
+    margin-bottom: 7rem;
+    color: #e60A6e;
+    font-size: 12rem;
+}
+
+.main-content p {
+    font-size: 2rem;
+    color: #FFF;
+}
+
+.third {
+    border: 1px solid #e60A6e;
+    background-color: #FFF;
+    color: #000;
+    height: 5rem;
+    width: 20rem;
+    border-radius: 30rem;
+    font-size: 1.5rem;
+    margin-top: 5rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.third:hover {
+    color: #e60A6e;
+}
+
+aside {
+    background-color: #e60A6e;
+    width: 100%;
+    padding: 6rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+aside h2 {
+    color: #FFF;
+    font-size: 5rem;
+    margin-bottom: 4rem;
+}
+
+aside h2 span {
+    color: #000;
+}
+
+aside .text {
+    font-size: 1.9rem;
+}
+
+.fonte {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fonte p {
+    color: #FFF;
+    margin-top: 5rem;
+}
+
+.fonte img {
+    width: 11rem;
+    height: 7rem;
+    margin-top: 5rem;
+}
+
+.section    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30rem;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.seta {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    margin-top: 50px;
+    transform: rotate(90deg);
+}
+
+.seta span {
+    width: 70px;
+    height: 3px;
+    background-color: #FFF;
+    position: relative;
+    transform: rotate(180deg);
+    text-align: center;
+}
+
+.seta span:before,
+.seta span:after {
+    margin-left: 4.7rem;
+    content: "";
+    width: 3rem;    
+    height: 100%;
+    background-color: #FFF;
+    position: relative;
+    display: flex;
+}
+
+.seta span:before {
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    bottom: 11px;
+}
+
+.seta span:after {
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: -6px;
+}
+
+.container .content {
+    width: 75%;
+}
+
+.container .content p {
+    font-size: 7rem;
+    margin: 3rem 0;
+    color: #FFF;
+}
+
+.container .content p span {
+    font-size: 4rem;
+}
+
+.container .content span {
+    color: #FFF;
+}
+
+.container .content span span {
+    color: rgb(255, 255, 0);
+    font-weight: bold;
+}
+
+.container .five {
+    margin-bottom: 5rem;
+}
+
+.container .six {
+    margin-bottom: 3rem;
+}
+
+aside button {
+    margin-bottom: 4rem;
+}
+
+.final-main {
+    background-color: #000;
+    width: 100%;
+    height: 100rem;
+    color: #FFF;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.final-main .main-content {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.final-main p {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.final-main p span {
+    color: #e60A6e;
+}
+
+.video {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.antes::before {
+    content: '<';
+    color: #FFF;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.video iframe {
+    width: 500px;
+    height: 500px;
+}
+
+.depois::after {
+    content: '>';
+    color: #FFF;
+    font-size: 5rem;
+    cursor: pointer;
+}
+
+.reto {
+    display: flex;
+    gap: 1rem;
+}
+
+.reta {
+    width: 5rem;
+    height: 1rem;
+    border-radius: 5px;
+    background-color: #e60A6e;
+}
+
+.ponto {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #888;
+}
+
+.curso {
+    min-height: 100vh;
+    margin-top: -20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.curso p {
+    color: #FFF;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}
+
+.curso p span {
+    font-weight: bold;
+}
+
+.curso .other {
+    font-size: 1.8rem;
+}
+
+.curso .other span {
+    color: #e60A6e;
+}
+
+.curso ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.know {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 4rem;
+    padding: 3rem;
+    width: 100%;
+}
+
+.curso-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 55rem;
+}
+
+.curso-content img {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+}
+
+.curso-content p {
+    font-size: 1.5rem;
+}
+
+.curso-content p::before {
+    content: '<';
+    color: #e60A6e; 
+}
+
+.curso-content p::after {
+    content: '>';
+    color: #e60A6e; 
+}
+
+.curso-content h4 {
+    color: #FFF;
+    width: 60%;
+    margin-top: -3rem;
+    margin-bottom: 2rem;
+}
+
+.curso-content span {
+    color: #FFF;
+    font-size: 1.3rem;
+}
+
+.curso-content button {
+    width: 20rem;
+    margin: auto;
+}
+
+.button.dos {
+    margin-top: 8rem;
+}
+
+.videosec {
+    background-color: #e60A6e;
+    width: 100%;
+}
+
+.curso iframe {
+    width: 100%;
+    height: 75rem;
+    margin-top: -15px;
+}
+
+.final-curso {
+    background-color: #e60A6e;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5rem;
+}
+
+.final-curso p {
+    color: #FFF;
+    font-size: 2rem;
+    width: 40%;
+    text-align: center;
+}
+
+.final-curso p span {
+    color: #000;
+}
+
+.final-curso .offer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    row-gap: 3rem;
+    width: 100%;
+}
+
+.item {
+    transition: .3s;
+    width: 30rem;
+}
+
+.item:hover {
+    transform: scale(1.02);
+    box-shadow: 5px 5px 1px rgba(0, 0, 0, .5);
+}
+
+.item img {
+    width: 30rem;
+    height: auto;
+}
+
+.item p {
+    width: 100%;
+    text-align: start;
+    margin-left: 2rem;
+}
+
+.item p::before {
+    content: '< ';
+    color: #e60A6e;
+    font-weight: bold;
+}
+
+.item p::after {
+    content: ' >';
+    color: #e60A6e;
+    font-weight: bold;
+}
+
+.final-curso-content {
+    width: 30.02rem;
+    background-color: #2d2d2d;
+    margin-top: -7px;
+    padding: 1rem;
+}
+
+.final-curso-content span {
+    text-align: center;
+    color: #FFF;
+}
+
+.howworks {
+    background-color: #000;
+    height: 450vh;
+    margin-top: 30rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.howworks p {
+    color: #FFF;
+    text-align: center;
+    font-size: 2.3rem;
+}
+
+.works-image    {
+    background-color: black;
+    color: #FFF;
+    background-image: url('https://escolaconquer.com.br/pos-graduacao/banners/target.webp');
+    background-position: center center;
+    background-size: auto;
+    padding: 20rem 0px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.second-work {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3rem;
+    column-gap: 1rem;
+}
+
+.works-content {
+    border: 1px solid #888;
+    border-radius: 7px;
+    background-color: #1d1d1d;
+    margin-left: 20rem;
+    width: 40rem;
+    height: 8rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.works-content:nth-child(1), .works-second-content:nth-child(1) {
+    margin-top: -35px;
+}
+
+.works-content p, .works-second-content p {
+    font-size: 1.6rem;
+}
+
+.second-divisor {
+    color: #FFF;
+    font-size: 9rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.works-second-content {
+    border: 1px solid #e60A6e;
+    border-radius: 7px;
+    background-color: #1d1d1d;
+    margin-right: 50rem;
+    width: 40rem;
+    height: 8rem;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.triangle {
+    border: 1px dashed #FFF;
+    border-radius: 10px;
+    margin-top: 9rem;
+    width: 80%;
+    height: 50rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.triangle-text {
+    width: 100%;
+}
+
+.triangle-text p {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.triangle-text p b {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+    line-height: 3.5rem;
+}
+
+.triangle-text span {
+    color: #FFF;
+    text-align: center;
+}
+
+.triangle-text span span {
+    color: #e60A6e;
+    font-weight: bold;
+}
+
+form {
+    width: 100%;
+    margin-left: 30rem;
+}
+
+form input {
+    margin-top: 3rem;
+    color: #FFF;
+}
+
+form input::placeholder {
+    color: #FFF;
+    font-size: 1.7rem;
+}
+
+.divisor {
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+    margin-top: 1rem;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.checkbox p {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+}
+
+.triangle-submit {
+    width: 40rem;
+    height: 6rem;
+    margin-top: 4rem;
+    background-color: #e60A6e;
+    border-radius: 3rem;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 1.9rem;
+    cursor: pointer;
+}
+
+.final-works {
+    background-image: url('https://escolaconquer.com.br/pos-graduacao/etc/bg-about2.webp');
+    background-size: cover;
+    height: 140vh;
+    width: 100%;
+    margin-top: 15rem;
+    padding: 5rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.final-works-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.final-works-text h2 {
+    color: #FFF;
+    font-size: 4.5rem;
+    font-weight: 200;
+    line-height: 7rem;
+}
+
+.final-works-text h4 {
+    font-size: 2.4rem;
+    margin: 4rem 0 2rem 0;
+    color: #FFF;
+    font-weight: 300;
+    line-height: 3.5rem;
+}
+
+.final-works-text h4 b {
+    color: #e60A6e;
+}
+
+.final-works-text p {
+    font-size: 1.5rem;
+    width: 90%;
+    text-align: left;
+}
+
+.final-works-text img {
+    width: 30rem;
+    height: 30rem;
+}
+
+.final-works-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.box-content    {
+    background-color: #2B2B2B;
+    margin: 0 0 2rem 5rem;
+    border-radius: 2rem;
+    padding: 3rem 3rem 3rem 2rem;
+    width: 90%;
+    height: 18rem;
+}
+
+.box-content span {
+    color: #e60A6e;
+    font-weight: bold;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+.box-content p {
+    font-size: 1.6rem;
+    text-align: left;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 250vh;
+}
+
+.faq p {
+    font-size: 3rem;
+    color: #FFF;
+    margin-bottom: 3rem ;
+}
+
+.faq span {
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.faq span span {
+    color: #e60A6e;
+    font-weight: bold;
+}
+
+.ask {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin-top: 5rem;
+    padding: 0 12rem;
+}
+
+.ask p {
+    color: #888;
+    font-size: 5rem;
+}
+
+.ask .other-ask {
+    color: #FFF;
+    font-size: 3rem;
+}
+
+.ask .setaR {
+    position: absolute;
+    padding: 20px;
+    box-shadow: 2px -2px 0 #e60A6e inset;
+    border: solid transparent;
+    border-width: 0 0 2px 2px;
+    transform: rotate(315deg);
+    margin-top: -50px;
+    margin-left: 90rem;
+    cursor: pointer ;
+}
+
+.final-ask {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    margin-top: 9rem;
+    border: 1px dashed #FFF;
+    border-radius: 3rem;
+    width: 80%;
+    align-items: center;
+}
+
+.final-ask p {
+    line-height: 3rem;
+}
+
+.final-ask img {
+    margin-left: 7rem;
+}
+
+.final-ask button {
+    width: 30rem;
+}
+
+footer {
+    padding: 5rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    column-gap: 9rem;
+    margin-bottom: 10rem;
+}
+
+.first-section img {
+    margin-bottom: 3rem;
+}
+
+.first-section ul li {
+    color: #888;
+    font-size: 1.6rem;
+    margin: 1rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.first-section ul li:hover {
+    color: #FFF;
+}
+
+.second-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    height: 20rem;
+}
+
+.help {
+    width: 20rem;
+}
+
+.second-section ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.second-section ul li i {
+    color: #888;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.third-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.final {
+    display: flex;
+}
+
+.final p {
+    color: #FFF;
+    margin: 1rem;
+    font-size: 1.8rem;
+}
+
+.final p span {
+    color: #e60A6e;
+}
+
+.copyright  {
+    color: #888;
+    font-size: 1.2rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0rem;
+}
+
+input {
+    background-color: #000;
+    border: none;
+    color: #FFF;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: #FFF;
+    margin: 2rem 0;
+}
+
+.submit  {
+    width: 10rem;
+    margin-top: 2rem;
+}
